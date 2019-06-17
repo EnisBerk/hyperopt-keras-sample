@@ -8,7 +8,7 @@ install_req: install_graph_viz
 	pip install -r requirements.txt
 
 run_hyperopt: install_req
-	pip install tensorflow
+	pip install tensorflow &&\
 	python hyperopt_optimize.py & tensorboard --logdir=$(CURRENT_DIR)/TensorBoard/
 
 run_hyperopt_worker: install_req
